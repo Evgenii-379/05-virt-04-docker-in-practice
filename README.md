@@ -114,8 +114,19 @@ See 'snap info docker' for additional versions.
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20210354.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20210407.png)
 
-- ![scrinshot](https://github.com/
-- ![scrinshot](https://github.com/
-- ![scrinshot](https://github.com/
-- ![scrinshot](https://github.com/
-- ![scrinshot](https://github.com/
+## **Задача 6**
+
+- Создаём временный каталог terraform_extracted:
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20134019.png)
+
+- Ищем каталог с файлом /bin/terraform в образах:
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20140801.png)
+- Копируем в каталог на локальном компьютере:
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20141251.png)
+- Утилита Dive:
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20141521.png)
+
+## **Задача 6.1**
+
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20153250.png)
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-03%20153224.png)
