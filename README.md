@@ -106,7 +106,7 @@ See 'snap info docker' for additional versions.
 
  compose.yaml
 
-- ![scrinshot](https://github.com/
+- ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-06%20002358.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-10-29%20211547.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20022208.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20132601.png)
