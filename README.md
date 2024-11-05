@@ -102,12 +102,13 @@ See 'snap info docker' for additional versions.
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20231849.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-05%20233436.png)
 ## **Задача 3**
-<ins>coppose.yaml</ins>:
+
+compose.yaml
 
 version: '3.8'
  
 include:
-  - proxy.yaml
+ -- proxy.yaml
  
 services:
   web:
@@ -115,7 +116,7 @@ services:
       context: .
       dockerfile: Dockerfile.python
     env_file:
-      - .env
+     -- .env
     restart: always
  
     networks:
@@ -144,7 +145,7 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.20.0.0/24
+       -- subnet: 172.20.0.0/24
 
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-10-29%20211547.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20022208.png)
@@ -152,23 +153,14 @@ networks:
 
 ## **Задача 4**
 
-#!/bin/bash
+!/bin/bash
 
-# Установка переменных для репозитория
 REPO_URL="https://github.com/Evgenii-379/shvirtd-example-python"
 TARGET_DIR="/opt/docker_practice"
-
-# Обновление и установка необходимых пакетов
 sudo apt update
 sudo apt install -y git
-
-# Клонирование форк-репозитория в каталог /opt
 sudo git clone "$REPO_URL" "$TARGET_DIR"
-
-# Переход в каталог проекта
 cd "$TARGET_DIR" || exit
-
-# Запуск проекта с помощью Docker Compose
 sudo docker compose up -d
 
 
