@@ -97,13 +97,13 @@ See 'snap info docker' for additional versions.
 
 
 ## **Задача 1**
-```
+
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20231655.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20231849.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-05%20233436.png)
 
 ## **Задача 3**
-```
+
  compose.yaml
 
 
@@ -114,57 +114,63 @@ include:
  
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile.python
-    env_file:
-     - .env
-    restart: always
+   build:
+   context: .
+   dockerfile: Dockerfile.python
+   env_file:
+   -- .env
+   restart: always
  
-    networks:
-      backend:
-        ipv4_address: 172.20.0.5
-    environment:
-      MYSQL_HOST: db
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+   networks:
+   backend:
+   ipv4_address: 172.20.0.5
+   environment:
+   MYSQL_HOST: db
+   MYSQL_USER: ${MYSQL_USER}
+   MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+   MYSQL_DATABASE: ${MYSQL_DATABASE}
  
   db:
-    image: mysql:8
-    networks:
-      backend:
-        ipv4_address: 172.20.0.10
-    restart: on-failure
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+   image: mysql:8
+   networks:
+   backend:
+   ipv4_address: 172.20.0.10
+   restart: on-failure
+   environment:
+   MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+   MYSQL_DATABASE: ${MYSQL_DATABASE}
+   MYSQL_USER: ${MYSQL_USER}
+   MYSQL_PASSWORD: ${MYSQL_PASSWORD}
  
 networks:
   backend:
-    driver: bridge
-    ipam:
-      config:
-       - subnet: 172.20.0.0/24
-```
+   driver: bridge
+   ipam:
+   config:
+   -- subnet: 172.20.0.0/24
+
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-10-29%20211547.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20022208.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20132601.png)
 
 ## **Задача 4**
-```
+
 !/bin/bash
 
 REPO_URL="https://github.com/Evgenii-379/shvirtd-example-python"
+
 TARGET_DIR="/opt/docker_practice"
+
 sudo apt update
+
 sudo apt install -y git
+
 sudo git clone "$REPO_URL" "$TARGET_DIR"
+
 cd "$TARGET_DIR" || exit
+
 sudo docker compose up -d
-```
+
 
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20202558.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20202608.png)
