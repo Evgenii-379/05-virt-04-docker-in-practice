@@ -97,18 +97,20 @@ See 'snap info docker' for additional versions.
 
 
 ## **Задача 1**
-
+```
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20231655.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20231849.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-05%20233436.png)
-## **Задача 3**
 
-compose.yaml
+## **Задача 3**
+```
+ compose.yaml
+
 
 version: '3.8'
  
 include:
- -- proxy.yaml
+ - proxy.yaml
  
 services:
   web:
@@ -116,7 +118,7 @@ services:
       context: .
       dockerfile: Dockerfile.python
     env_file:
-     -- .env
+     - .env
     restart: always
  
     networks:
@@ -145,14 +147,14 @@ networks:
     driver: bridge
     ipam:
       config:
-       -- subnet: 172.20.0.0/24
-
+       - subnet: 172.20.0.0/24
+```
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-10-29%20211547.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20022208.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20132601.png)
 
 ## **Задача 4**
-
+```
 !/bin/bash
 
 REPO_URL="https://github.com/Evgenii-379/shvirtd-example-python"
@@ -162,7 +164,7 @@ sudo apt install -y git
 sudo git clone "$REPO_URL" "$TARGET_DIR"
 cd "$TARGET_DIR" || exit
 sudo docker compose up -d
-
+```
 
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20202558.png)
 - ![scrinshot](https://github.com/Evgenii-379/05-virt-04-docker-in-practice/blob/main/Снимок%20экрана%202024-11-02%20202608.png)
